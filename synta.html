@@ -1,0 +1,11 @@
+<expr> ::= <term> {(+ | -) <term>}
+    <term> ::= <factor> {(* | /) <factor>}
+    <factor> ::= <identifier> | <constant> | (<expr>)
+    
+    <function_declaration> ::= "function" <identifier> "(" {<parameter>} ")" "{" {<statement>} "}"
+    <conditional_statement> ::= "if" "(" <condition> ")" "{" {<statement>} "}" | "if" "(" <condition> ")" "{" {<statement>} "}" "else" "{" {<statement>} "}"
+    <loop> ::= "for" "(" <init_statement> ";" <condition> ";" <increment_statement> ")" "{" {<statement>} "}" | "while" "(" <condition> ")" "{" {<statement>} "}"
+    <data_type> ::= "integer" | "float" | "string" | "boolean"
+    <variable_declaration> ::= "data" <data_type> <identifier> "=" <constant>
+    <comment> ::= "//" <comment_text>
+    
